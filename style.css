@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #141414; /* Dark background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    color: white;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker navbar */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #e50914;
+}
+
+/* Featured Section */
+.featured {
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-banner-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.featured-content {
+    z-index: 3; /* Make sure content is above the overlay */
+    max-width: 600px;
+}
+
+.featured-content h1 {
+    font-size: 48px;
+}
+
+.featured-content p {
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+.play-btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.info-btn {
+    background-color: gray;
+    color: white;
+}
+
+/* Overlay for Featured Section */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    z-index: 2; /* Ensure overlay is above the video but below buttons */
+}
+
+/* Movie Rows */
+.movie-rows {
+    padding: 80px 40px;
+}
+
+.movie-rows h2 {
+    margin-bottom: 15px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.movie-row img {
+    width: 250px; /* Larger thumbnails */
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.movie-row img:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .featured-content h1 {
+        font-size: 36px;
+    }
+
+    .featured-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .movie-row img {
+        width: 150px;
+        height: 80px;
+    }
+}

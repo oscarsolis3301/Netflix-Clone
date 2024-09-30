@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="YOUR_FAVICON_URL" type="image/x-icon"> <!-- Replace with your favicon link -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Netflix</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">New & Popular</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+    </header>
+
+<!-- Featured Section -->
+<section class="featured">
+    <div class="featured-banner">
+        <!-- YouTube Video Embed -->
+        <iframe class="featured-banner-video" 
+                src="https://www.youtube.com/embed/b7WD-SpNX_I?autoplay=1&mute=1&loop=1&playlist=b7WD-SpNX_I" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+        </iframe>
+        <div class="overlay"></div> <!-- Overlay to block the video controls -->
+    </div>
+    <div class="featured-content">
+        <h1>Featured Movie</h1>
+        <p>Watch this exciting movie now!</p>
+        <div class="buttons">
+            <button class="btn play-btn">
+                <img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Octicons-playback-play.svg/16px-Octicons-playback-play.svg.png" alt="Play Icon" class="icon">Play
+            </button>
+            <button class="btn info-btn">More Info</button>
+        </div>
+    </div>
+</section>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('featuredVideo', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+        setInterval(checkVideoStatus, 1000);
+    }
+
+    function checkVideoStatus() {
+        if (player.getPlayerState() === YT.PlayerState.PAUSED) {
+            player.playVideo();
+        }
+    }
+</script>
+
+    <!-- Movie Rows -->
+    <section class="movie-rows">
+        <h2>Popular on Netflix</h2>
+        <div class="movie-row">
+            <img src="https://images.pexels.com/photos/4588013/pexels-photo-4588013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+            <img src="https://images.pexels.com/photos/5731819/pexels-photo-5731819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+            <img src="https://images.pexels.com/photos/5255554/pexels-photo-5255554.jpeg" alt="Movie 3">
+            <img src="https://images.pexels.com/photos/332974/pexels-photo-332974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+            <img src="https://images.pexels.com/photos/5256176/pexels-photo-5256176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        </div>
+
+        <h2>Trending Now</h2>
+        <div class="movie-row">
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+            <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+            <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
+            <img src="https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+            <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        </div>
+
+        <h2>Top Picks for You</h2>
+        <div class="movie-row">
+            <img src="https://images.pexels.com/photos/3726314/pexels-photo-3726314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+            <img src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+            <img src="https://images.pexels.com/photos/3738516/pexels-photo-3738516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
+            <img src="https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+            <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        </div>
+    </section>
+</body>
+</html>
