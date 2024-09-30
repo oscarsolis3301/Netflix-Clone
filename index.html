@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="YOUR_FAVICON_URL" type="image/x-icon"> <!-- Replace with your favicon link -->
 </head>
 <body>
     <!-- Navigation Bar -->
     <header class="navbar">
-        <div class="logo">Netflix</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">TV Shows</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">New & Popular</a></li>
-            <li><a href="#">My List</a></li>
-        </ul>
+        <div class="left-nav">
+            <div class="logo">Netflix</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </div>
+        <div class="right-nav">
+            <a href="#" class="search-icon">🔍</a>
+            <a href="#" class="kids-link">Kids</a>
+            <a href="#" class="bell-icon">🔔</a>
+            <div class="profile-dropdown">
+                <img src="https://via.placeholder.com/32" alt="Profile" class="profile-pic">
+                <span class="arrow">▼</span>
+            </div>
+        </div>
     </header>
 
 <!-- Featured Section -->
@@ -67,35 +77,108 @@
         }
     }
 </script>
-
-    <!-- Movie Rows -->
-    <section class="movie-rows">
+<!-- Movie Rows Carousel -->
+<section class="movie-rows">
+    <div class="carousel-container">
         <h2>Popular on Netflix</h2>
-        <div class="movie-row">
-            <img src="https://images.pexels.com/photos/4588013/pexels-photo-4588013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
-            <img src="https://images.pexels.com/photos/5731819/pexels-photo-5731819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
-            <img src="https://images.pexels.com/photos/5255554/pexels-photo-5255554.jpeg" alt="Movie 3">
-            <img src="https://images.pexels.com/photos/332974/pexels-photo-332974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
-            <img src="https://images.pexels.com/photos/5256176/pexels-photo-5256176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        <div class="carousel">
+            <button class="arrow left-arrow">❮</button>
+            <div class="movie-row">
+                <img src="https://images.pexels.com/photos/4588013/pexels-photo-4588013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+                <img src="https://images.pexels.com/photos/5731819/pexels-photo-5731819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+                <img src="https://images.pexels.com/photos/5255554/pexels-photo-5255554.jpeg" alt="Movie 3">
+                <img src="https://images.pexels.com/photos/332974/pexels-photo-332974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+                <img src="https://images.pexels.com/photos/5256176/pexels-photo-5256176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+            </div>
+            <button class="arrow right-arrow">❯</button>
+        </div>
+        <div class="indicator-container">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
         </div>
 
         <h2>Trending Now</h2>
-        <div class="movie-row">
-            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
-            <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
-            <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
-            <img src="https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
-            <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        <div class="carousel">
+            <button class="arrow left-arrow">❮</button>
+            <div class="movie-row">
+                <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+                <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+                <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
+                <img src="https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+                <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+            </div>
+            <button class="arrow right-arrow">❯</button>
+        </div>
+        <div class="indicator-container">
+            <span class="indicator"></span>
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
         </div>
 
         <h2>Top Picks for You</h2>
-        <div class="movie-row">
-            <img src="https://images.pexels.com/photos/3726314/pexels-photo-3726314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
-            <img src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
-            <img src="https://images.pexels.com/photos/3738516/pexels-photo-3738516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
-            <img src="https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
-            <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+        <div class="carousel">
+            <button class="arrow left-arrow">❮</button>
+            <div class="movie-row">
+                <img src="https://images.pexels.com/photos/3726314/pexels-photo-3726314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 1">
+                <img src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 2">
+                <img src="https://images.pexels.com/photos/3738516/pexels-photo-3738516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 3">
+                <img src="https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 4">
+                <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Movie 5">
+            </div>
+            <button class="arrow right-arrow">❯</button>
         </div>
-    </section>
+        <div class="indicator-container">
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator active"></span>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach((carousel) => {
+        const movieRow = carousel.querySelector('.movie-row');
+        const leftArrow = carousel.querySelector('.left-arrow');
+        const rightArrow = carousel.querySelector('.right-arrow');
+        const indicators = carousel.parentElement.querySelectorAll('.indicator');
+        
+        let scrollAmount = 0;
+        const scrollStep = 250; // Adjust this value for how far to scroll
+        const totalImages = movieRow.children.length; // Total number of images
+        const visibleCount = Math.floor(carousel.clientWidth / scrollStep); // Number of visible images
+
+        // Update indicators based on scroll position
+        const updateIndicators = () => {
+            const index = Math.floor(scrollAmount / scrollStep);
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        };
+
+        leftArrow.addEventListener('click', () => {
+            if (scrollAmount > 0) {
+                scrollAmount -= scrollStep;
+                movieRow.style.transform = `translateX(-${scrollAmount}px)`;
+                updateIndicators(); // Update indicators on scroll
+            }
+        });
+
+        rightArrow.addEventListener('click', () => {
+            if (scrollAmount < (totalImages - visibleCount) * scrollStep) {
+                scrollAmount += scrollStep;
+                movieRow.style.transform = `translateX(-${scrollAmount}px)`;
+                updateIndicators(); // Update indicators on scroll
+            }
+        });
+
+        updateIndicators(); // Initialize indicators on load
+    });
+</script>
+
+
 </body>
 </html>

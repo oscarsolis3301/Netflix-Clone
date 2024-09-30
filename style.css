@@ -164,3 +164,278 @@ body {
         height: 80px;
     }
 }
+
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 10px; /* Adds space between icon and text */
+}
+
+.play-btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.info-btn {
+    background-color: gray;
+    color: white;
+}
+
+/* Featured Section */
+.featured {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Featured Video */
+.featured-banner-video {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+
+/* Movie Rows */
+.movie-rows {
+    padding: 40px 20px;
+}
+
+.movie-rows h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+.movie-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Chrome/Safari */
+}
+
+.movie-row img {
+    width: 300px; /* Wider thumbnails for more immersive experience */
+    height: 170px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+    transform: scale(1.08); /* Hover effect to enlarge the tiles */
+    cursor: pointer;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #141414; /* Dark background */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker navbar */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+/* Right Side of the Navbar */
+.search-icon, .kids-link, .bell-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.search-icon:hover, .kids-link:hover, .bell-icon:hover {
+    color: #e50914;
+}
+
+.profile-dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.arrow {
+    font-size: 14px;
+    color: white;
+}
+
+/* Other parts of your existing CSS stay untouched */
+
+
+.carousel-container {
+    margin-bottom: 40px; /* Add some space below the carousel */
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative; /* To position arrows correctly */
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.movie-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden; /* Hide overflow for the carousel */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.movie-row img {
+    width: 250px; /* Adjust width */
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.movie-row img:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space above indicators */
+}
+
+.indicator {
+    width: 10px; /* Width of each pill */
+    height: 10px; /* Height of each pill */
+    border-radius: 50%; /* Makes them circular */
+    background-color: rgba(255, 255, 255, 0.5); /* Light color with transparency */
+    margin: 0 5px; /* Space between indicators */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white; /* Full color for active indicator */
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 100; /* Ensure arrows are on top */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Additional styles for movie rows */
+.movie-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden; /* Hide overflow for the carousel */
+    transition: transform 0.5s ease; /* Smooth transition */
+    padding: 0 15px; /* Add padding to the sides */
+}
+
+.movie-row img {
+    width: 250px; /* Adjust width */
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.movie-row img:hover {
+    transform: scale(1.05); /* Hover effect */
+}
